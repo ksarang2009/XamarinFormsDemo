@@ -4,8 +4,17 @@
              xmlns:local="clr-namespace:XamarinFormsDemo"
              x:Class="XamarinFormsDemo.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout Padding="10">
+        <Label Text="Parameter 1"></Label>
+        <Entry x:Name="txtParam1" Keyboard="Numeric" Placeholder="Enter Parameter 1"></Entry>
+        
+        <Label Text="Parameter 2"></Label>
+        <Entry x:Name="txtParam2" Keyboard="Numeric" Placeholder="Enter Parameter 2"></Entry>
+        
+        <Label Text="Result"></Label>
+        <Entry x:Name="txtResult" IsEnabled="False" Placeholder="Result goes here"></Entry>
+        
+        <Button x:Name="btnCalculate" Text="Calculate"></Button>
+    </StackLayout>
 
 </ContentPage>
