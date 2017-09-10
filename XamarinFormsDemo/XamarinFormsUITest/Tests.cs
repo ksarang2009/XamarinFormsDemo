@@ -38,6 +38,18 @@ namespace XamarinFormsUITest
             Console.Write("Output: " + value);
             Assert.AreEqual("30", value);
         }
+
+        [Test]
+        public void AdditionNegativeTestCase()
+        {
+            app.EnterText(marked: "txtParam1", text: "");
+            app.EnterText(marked: "txtParam2", text: "-20");
+            app.Tap(marked: "btnCalculate");
+            var appEntryFieldQuery = app.Query(marked: "txtResult");
+            var value = appEntryFieldQuery?.FirstOrDefault()?.Text ?? string.Empty;
+            Console.Write("Output: " + value);
+            Assert.AreEqual("Invalid input.", value);
+        }
     }
 }
 
