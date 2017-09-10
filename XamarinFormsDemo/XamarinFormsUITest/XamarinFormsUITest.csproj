@@ -62,5 +62,14 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamarinFormsDemo\XamarinFormsDemo.Android\XamarinFormsDemo.Android.csproj">
+      <Project>{3ea68154-ec87-42a1-a748-a02146168411}</Project>
+      <Name>XamarinFormsDemo.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

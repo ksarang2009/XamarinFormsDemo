@@ -6,15 +6,15 @@
 
     <StackLayout Padding="10">
         <Label Text="Parameter 1"></Label>
-        <Entry x:Name="txtParam1" Keyboard="Numeric" Placeholder="Enter Parameter 1"></Entry>
-        
+        <Entry x:Name="txtParam1" Keyboard="Numeric" AutomationId="txtParam1" Placeholder="Enter Parameter 1"></Entry>
+
         <Label Text="Parameter 2"></Label>
-        <Entry x:Name="txtParam2" Keyboard="Numeric" Placeholder="Enter Parameter 2"></Entry>
-        
+        <Entry x:Name="txtParam2" Keyboard="Numeric" AutomationId="txtParam2" Placeholder="Enter Parameter 2"></Entry>
+
         <Label Text="Result"></Label>
-        <Entry x:Name="txtResult" IsEnabled="False" Placeholder="Result goes here"></Entry>
-        
-        <Button x:Name="btnCalculate" Text="Calculate"></Button>
+        <Entry x:Name="txtResult" AutomationId="txtResult" TextColor="Black" FontSize="Medium" IsEnabled="False" Placeholder="Result goes here"></Entry>
+
+        <Button x:Name="btnCalculate" Text="Calculate" AutomationId="btnCalculate"></Button>
     </StackLayout>
 
 </ContentPage>
