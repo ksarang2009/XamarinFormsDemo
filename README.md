@@ -29,6 +29,7 @@ To achieve all the above for this project, here is a step by step guide
   * Click `Android Options` tab
   * Select `SDK Assemblies Only` from the `Linking` dropdown – This will only link the assemblies that are required by Xamarin.Android. Other assemblies will not be linked.
   * Check the `ProGuard` option. Proguard is an Android SDK tool that links and obfuscates Java code. ProGuard is normally used to create smaller applications by reducing the footprint of large included libraries (such as Google Play Services) in your APK. ProGuard removes unused Java bytecode, which makes the resulting app smaller.
+* To target Android app to just armeabi-v7a(or the precise ABI on the device the is being run on) - click `Android Options` tab > scroll to bottom > click `Advance` button & choose from `Supported Architechtures`.
 * Check `Generate One Package (.APK) per Selected ABI` by this one APK will be created for each of the supported ABI's (one apk for this case)
 * To protect the application & disable debugging select `Release` mode
 * After all of the above steps are completed, the app is ready for compilation. Select `Build` > `Rebuild Solution` to verify that it builds successfully in Release mode.
