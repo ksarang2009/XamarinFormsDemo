@@ -7,6 +7,9 @@ using Xamarin.UITest.Queries;
 
 namespace XamarinFormsUITest
 {
+    /// <summary>
+    /// Tests class for UI test cases
+    /// </summary>
     [TestFixture(Platform.Android)]
     //[TestFixture(Platform.iOS)] Don't have mac machine so commented iOS
     public class Tests
@@ -14,17 +17,27 @@ namespace XamarinFormsUITest
         IApp app;
         Platform platform;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Tests"/> class.
+        /// </summary>
+        /// <param name="platform">The platform.</param>
         public Tests(Platform platform)
         {
             this.platform = platform;
         }
 
+        /// <summary>
+        /// Invokes before the each test.
+        /// </summary>
         [SetUp]
         public void BeforeEachTest()
         {
             app = AppInitializer.StartApp(platform);
         }
 
+        /// <summary>
+        /// Positive test case for addition.
+        /// </summary>
         [Test]
         public void AdditionPositiveTestCase()
         {
@@ -39,6 +52,9 @@ namespace XamarinFormsUITest
             Assert.AreEqual("30", value);
         }
 
+        /// <summary>
+        /// Negative test case for addition.
+        /// </summary>
         [Test]
         public void AdditionNegativeTestCase()
         {

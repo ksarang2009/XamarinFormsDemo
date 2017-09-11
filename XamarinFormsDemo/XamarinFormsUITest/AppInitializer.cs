@@ -7,8 +7,16 @@ using Xamarin.UITest.Queries;
 
 namespace XamarinFormsUITest
 {
+    /// <summary>
+    /// class AppInitializer
+    /// </summary>
     public class AppInitializer
     {
+        /// <summary>
+        /// Starts the application.
+        /// </summary>
+        /// <param name="platform">The platform.</param>
+        /// <returns></returns>
         public static IApp StartApp(Platform platform)
         {
             if (platform == Platform.Android)
@@ -17,7 +25,6 @@ namespace XamarinFormsUITest
                 FileInfo fi = new FileInfo(currentFile);
                 string dir = fi.Directory.Parent.Parent.Parent.FullName;
                 Console.Write("DIR: " + dir);
-                // PathToAPK is a property or an instance variable in the test class
                 var pathToAPK = Path.Combine(dir, "XamarinFormsDemo", "XamarinFormsDemo.Android", "bin", "Release", "XamarinFormsDemo.Android.apk");
                 Console.Write("PathToAPK: " + pathToAPK);
                 return ConfigureApp
