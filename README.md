@@ -54,3 +54,11 @@ To achieve all the above for this project, here is a step by step guide
  
 `[Note]: I have follwed these steps but I don't have any mac machine connected, I didn't find the ipa file in bin > iOS Device > Ad Hoc folder. The VS warning I got was - warning : There is no available connection to the Mac, hence the task Xamarin.MacDev.Tasks.CollectBundleResources will not be executed.`
 
+## UI Test Implementation
+### Android Automation Testing
+* Create environment variable ANDROID_HOME targeting android sdk location in pc.
+* Select `Build` > `Rebuild Solution` to verify that it builds successfully in Release mode.
+* Open `Solution Explorer` > right click `XamarinFormsDemo.Android` project > click `Archive`, this will create android built.
+* Connect Android device to the machine.
+* Select `Test` > `Windows` > `Test Explorer` it will open the Text Explorer window showing available test cases.
+* Click `RunAll`, it will run all the test cases and show the result.
