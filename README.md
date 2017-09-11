@@ -36,3 +36,21 @@ To achieve all the above for this project, here is a step by step guide
 * To begin the publishing process, right-click the project in `Solution Explorer` and select the `Archive` context menu item.
 
 `Archive` launches the `Archive Manager` and begins the process of archiving the App bundle & generates apk file in `bin` > `Realease` folder.
+
+### Building ipa file
+* iTunes Artwork Setup
+  * Open `Solution Explorer` and expand `XamarinFormsDemo.iOS` project.
+  * Double-click the `Info.plist` file to open it for editing.
+  * Scroll to the iTunes Artwork section of the editor.
+  * For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the OK or Open button.
+* Creating an IPA
+  * Open `Solution Explorer`, right-click the XamarinFormsDemo.iOS project name and select Properties to open them for editing
+  * Select iOS IPA Options and select Ad-Hoc from the Configuration dropdown list.
+  * Specify package name for the IPA
+  * Save your changes to the Project Properties.
+  *  Select Ad Hoc from the Build Configuration dropdown.
+  * Build the project to create the IPA package.
+  * The IPA will be build in the bin > iOS Device > Ad Hoc folder.
+ 
+`[Note]: I have follwed these steps but I don't have any mac machine connected, I didn't find the ipa file in bin > iOS Device > Ad Hoc folder. The VS warning I got was - warning : There is no available connection to the Mac, hence the task Xamarin.MacDev.Tasks.CollectBundleResources will not be executed.`
+
