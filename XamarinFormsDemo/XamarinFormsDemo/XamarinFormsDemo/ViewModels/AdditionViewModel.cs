@@ -50,7 +50,7 @@ namespace XamarinFormsDemo.ViewModels
         public string Result
         {
             get { return result; }
-            set { result = value; }
+            private set { result = value; }
         }
         
         public Command AdditionCommand { get; set; }

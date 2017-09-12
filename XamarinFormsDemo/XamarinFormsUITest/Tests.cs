@@ -46,7 +46,7 @@ namespace XamarinFormsUITest
             app.EnterText(marked: "txtParam1", text: "10");
             app.EnterText(marked: "txtParam2", text: "20");
             app.Tap(marked: "btnCalculate");
-            var appEntryFieldQuery = app.Query(marked: "txtResult");
+            var appEntryFieldQuery = app.Query(marked: "lblResult");
             var value = appEntryFieldQuery?.FirstOrDefault()?.Text ?? string.Empty;
             Console.Write("Output: " + value);
             Assert.AreEqual("30", value);
@@ -61,7 +61,7 @@ namespace XamarinFormsUITest
             app.EnterText(marked: "txtParam1", text: "");
             app.EnterText(marked: "txtParam2", text: "-20");
             app.Tap(marked: "btnCalculate");
-            var appEntryFieldQuery = app.Query(marked: "txtResult");
+            var appEntryFieldQuery = app.Query(marked: "lblResult");
             var value = appEntryFieldQuery?.FirstOrDefault()?.Text ?? string.Empty;
             Console.Write("Output: " + value);
             Assert.AreEqual("Invalid input.", value);

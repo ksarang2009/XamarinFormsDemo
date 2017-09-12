@@ -5,13 +5,13 @@
              x:Class="XamarinFormsDemo.MainPage">
 
     <StackLayout Padding="10">
-        <Label Text="Parameter 1"></Label>
+        <Label Text="First Parameter"></Label>
         <Entry Text="{Binding FirstParameter}" Keyboard="Numeric" AutomationId="txtParam1" Placeholder="Enter Parameter 1"></Entry>
-        
-        <Label Text="Parameter 2"></Label>
+
+        <Label Text="Second Parameter"></Label>
         <Entry Text="{Binding SecondParameter}" Keyboard="Numeric" AutomationId="txtParam2" Placeholder="Enter Parameter 2"></Entry>
-        
-        <Label Text="{Binding Result}" FontSize="24" TextColor="Black"></Label>
+
+        <Label Text="{Binding Result}" AutomationId="lblResult" FontSize="24" TextColor="Black"></Label>
 
         <Button Text="Calculate" Command="{Binding AdditionCommand}" AutomationId="btnCalculate"></Button>
     </StackLayout>
