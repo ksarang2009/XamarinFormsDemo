@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinFormsDemo.Interfaces;
+using XamarinFormsDemo.Services;
+using XamarinFormsDemo.Utilities;
 
 namespace XamarinFormsDemo.ViewModels
 {
@@ -14,12 +13,14 @@ namespace XamarinFormsDemo.ViewModels
         public AdditionViewModel()
         {
             AdditionCommand = new Command(CalculateAddition);
+            calculateService = new CalculateService();
         }
 
         string firstParameter = string.Empty;
         string secondParameter = string.Empty;
         int firstValue, secondValue;
         string result;
+        ICalculateService calculateService;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -60,17 +61,11 @@ namespace XamarinFormsDemo.ViewModels
             {
                 if (int.TryParse(firstParameter, out firstValue) && int.TryParse(secondParameter, out secondValue))
                 {
-                    while (secondValue != 0)
-                    {
-                        int carry = firstValue & secondValue;
-                        firstValue = firstValue ^ secondValue;
-                        secondValue = carry << 1;
-                    }
-                    result = firstValue.ToString();
+                    result = calculateService.Addition(firstValue, secondValue).ToString();
                 }
                 else
                 {
-                    result = "Invalid input.";
+                    result = Constants.ErrorMessage;
                 }                
             }
             catch (Exception)
