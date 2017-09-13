@@ -8,7 +8,7 @@ namespace XamarinFormsDemo.Services
         {
             while (secondValue != 0)
             {
-                int carry = firstValue & secondValue;
+                var carry = firstValue & secondValue;
                 firstValue = firstValue ^ secondValue;
                 secondValue = carry << 1;
             }

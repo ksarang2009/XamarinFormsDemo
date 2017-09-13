@@ -18,7 +18,6 @@ namespace XamarinFormsDemo.ViewModels
 
         string firstParameter = string.Empty;
         string secondParameter = string.Empty;
-        int firstValue, secondValue;
         string result;
         ICalculateService calculateService;
 
@@ -59,7 +58,7 @@ namespace XamarinFormsDemo.ViewModels
         {
             try
             {
-                if (int.TryParse(firstParameter, out firstValue) && int.TryParse(secondParameter, out secondValue))
+                if (int.TryParse(firstParameter, out int firstValue) && int.TryParse(secondParameter, out int secondValue))
                 {
                     result = calculateService.Addition(firstValue, secondValue).ToString();
                 }
